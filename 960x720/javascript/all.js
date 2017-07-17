@@ -118,15 +118,15 @@ function createImage(template,source,x,y,w,h){
   userimage.src = source;
 
   var resize_canvas = document.getElementById("result");
-  resize_canvas.width = 500;
-  resize_canvas.height = 500;
+  resize_canvas.width = 960;
+  resize_canvas.height = 720;
 
   var ctx = resize_canvas.getContext("2d");
-  ctx.rect(0,0,500,500);
+  ctx.rect(0,0,960,720);
   ctx.fillStyle="#CCCCCC";
   ctx.fill();
   ctx.drawImage(userimage,x,y,w,h);
-  ctx.drawImage(cover,0,0,500,500);
+  ctx.drawImage(cover,0,0,960,720);
 
   var base64 = resize_canvas.toDataURL("image/png");
   $('#download').attr('href',base64);
