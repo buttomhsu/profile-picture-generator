@@ -79,7 +79,7 @@ $(document).ready(function()
     basesize = $userimage.width(),
     size = getBackgroundSize($userimage.css('background-size')),
     position = getBackgroundPosition($userimage.css('background-position')),
-    scale = basesize/500;
+    scale = basesize/960;
 
     var
     template = $('input[name=template]:checked').val(),
@@ -104,7 +104,7 @@ $(window).konami({
     $('#formbuttons,.template-label').delay(400).animate({'opacity':'0'},2600)
     $('#settings').delay(1000).animate({'opacity':'0'},2000)
     $('.left-bottom-corner').delay(800).animate({'opacity':'0'},2200)
-    $('.preview').animate({'top':'-500px','opacity':'0.5'},3000).animate({'width':'0','opacity':'0'},3000,function(){
+    $('.preview').animate({'top':'-960px','opacity':'0.5'},3000).animate({'width':'0','opacity':'0'},3000,function(){
       $('#content').slideUp();
     })
   }
@@ -192,14 +192,8 @@ function loadImage(files) {
 
     var thumb = document.getElementById("thumb");
     var thumb_w,thumb_h;
-    if(img.width > img.height) {
-      thumb_h = 100;
-      thumb_w = 100*(img.width/img.height);
-    }
-    else {
-      thumb_w = 100;
-      thumb_h = 100*(img.height/img.width);
-    }
+    thumb_w = 100;
+    thumb_h = 100*(img.height/img.width);
     thumb.width = thumb_w;
     thumb.height = thumb_h;
     var ctx = thumb.getContext("2d");
