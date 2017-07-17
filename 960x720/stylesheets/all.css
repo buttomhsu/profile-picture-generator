@@ -474,7 +474,7 @@ label.checkbox {
 .preview #userimage,
 .preview #coverimage {
   width: 100%;
-  max-width: 500px;
+  max-width: 960px;
   position: absolute;
   top: 0;
   bottom: 0;
