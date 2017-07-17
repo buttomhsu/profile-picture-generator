@@ -459,7 +459,7 @@ label.checkbox {
 /* line 1, ../sass/partials/_preview.scss */
 .preview {
   position: relative;
-  max-width: 500px;
+  max-width: 960px;
   margin: 0 auto;
   border: 2px solid #9bd4d9;
 }
