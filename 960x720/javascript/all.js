@@ -29,7 +29,7 @@ $(document).ready(function()
   $sizer.slider({
     value: 100,
     max: 170,
-    min: 30,
+    min: 5,
     slide: function(event, ui) {
       var
       truesize = getBackgroundSize($userimage.css('background-size')),
